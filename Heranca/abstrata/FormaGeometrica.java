@@ -1,3 +1,3 @@
-public abstract FormaGeometrica {
+public abstract class FormaGeometrica {
 	abstract double area();
 }

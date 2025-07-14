@@ -20,6 +20,23 @@ public class Livro extends Produto{
         return precoBruto  + (precoBruto * 0.15);
     }
     
-
+	public int getPaginas() {
+		return paginas;
+	}
+	public void setPaginas(int paginas) {
+		this.paginas = paginas;
+	}
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	public int getEdicao() {
+		return edicao;
+	}
+	public void setEdicao(int edicao) {
+		this.edicao = edicao;
+	}
     
 }

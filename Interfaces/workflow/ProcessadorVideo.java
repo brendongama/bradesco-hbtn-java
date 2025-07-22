@@ -1,5 +1,3 @@
-package Interfaces.workflow;
-
 import java.util.ArrayList;
 
 public class ProcessadorVideo {

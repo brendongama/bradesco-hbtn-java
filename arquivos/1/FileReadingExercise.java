@@ -1,5 +1,3 @@
-package arquivos.um;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +9,7 @@ public class FileReadingExercise {
 		
 		String fileName = "exemplo.txt";
 
-		String caminho = "src\\arquivos\\um\\";
+		String caminho = "../1/";
 		File arquivo = new File(caminho + fileName);
 		
 		if (arquivo.exists()) {
@@ -26,7 +24,7 @@ public class FileReadingExercise {
 				System.out.println("Erro ao ler o arquivo "+fileName+".");
 			}
 		} else {
-			throw new FileNotFoundException("Arquivo " + fileName + " não existe");
+			throw new FileNotFoundException("Arquivo " + caminho+fileName + " não existe");
 		}
 
 	}

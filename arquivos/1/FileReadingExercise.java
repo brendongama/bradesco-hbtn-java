@@ -21,8 +21,7 @@ public class FileReadingExercise {
 				while ((linha = bufferedReader.readLine()) != null) {
 					System.out.println(linha);
 				}
-				System.out.println("\n");
-				System.out.println("Leitura do arquivo concluída.");
+				System.out.println("\nLeitura do arquivo concluída.");
 			} catch (IOException e) {
 				System.out.println("Erro ao ler o arquivo "+fileName+".");
 			}

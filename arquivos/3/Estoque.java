@@ -38,7 +38,7 @@ public class Estoque {
     }
 
 	public void adicionarProduto(String nome, int quantidade, double preco) {
-		int id = produtos.size()+1;
+		int id = produtos.get(produtos.size() - 1).getId() + 1;
 		if(produtos.isEmpty() ) {
 			id = 1;
 		}

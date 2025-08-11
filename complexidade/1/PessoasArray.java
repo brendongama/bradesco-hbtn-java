@@ -21,9 +21,9 @@ public class PessoasArray {
     public void buscaLinear(String nome){
     	boolean encontrado = false;
     	int index = 0;
-    	System.out.println("Procurando pelo nome: "+nome);
+    	System.out.println("Procurando pelo nome: \""+nome+"\"");
     	for (String nomePessoa : nomes) {
-    		System.out.println("Passando pelo indice: "+index);
+    		System.out.println("Passando pelo indice:"+index);
 			if(nomePessoa.equals(nome)) {
 				encontrado = true;
 				System.out.println("Nome pesquisado é "+nome+" que está na posição "+index);

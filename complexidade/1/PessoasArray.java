@@ -1,7 +1,6 @@
 public class PessoasArray {
 
     private String[] nomes;
-
     public PessoasArray() {
         nomes =new String[]{"Amanda", "Beatriz", "Carlos","Daniela","Eduardo",
                 "Fabio","Gustavo", "Hingrid","Isabela","Joao","Leise","Maria",
@@ -17,7 +16,6 @@ public class PessoasArray {
         this.nomes = nomes;
     }
 
-    // implementar o método de buscaLinear
     public void buscaLinear(String nome){
     	boolean encontrado = false;
     	int index = 0;

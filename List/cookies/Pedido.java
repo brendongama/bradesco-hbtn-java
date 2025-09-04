@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Pedido {
+
+	private List<PedidoCookie> cookies;
+
+	public Pedido() {
+		cookies = new ArrayList<>();
+	}
+
+	public void adicionarPedidoCookie(PedidoCookie pedido) {
+		cookies.add(pedido);
+	}
+
+	public int obterTotalCaixas() {
+		int total = 0;
+		for (PedidoCookie pedido : cookies) {
+			total += pedido.getQuantidadeCaixas();
+		}
+		return total;
+	}
+
+	public int removerSabor(String sabor) {
+		int caixasRemovidas = 0;
+		Iterator<PedidoCookie> iterator = cookies.iterator();
+
+		while (iterator.hasNext()) {
+			PedidoCookie pedido = iterator.next();
+			if (pedido.getSabor().equalsIgnoreCase(sabor)) {
+				caixasRemovidas += pedido.getQuantidadeCaixas();
+				iterator.remove();
+			}
+		}
+		return caixasRemovidas;
+	}
+}

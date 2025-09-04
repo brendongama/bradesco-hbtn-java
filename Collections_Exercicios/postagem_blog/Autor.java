@@ -1,8 +1,9 @@
-public class Autor implements Comparable<Autor> {
+public class Autor implements Comparable<Autor>{
+    
     private String nome;
     private String sobrenome;
 
-    public Autor(String nome, String sobrenome) {
+    public Autor(String nome, String sobrenome){
         this.nome = nome;
         this.sobrenome = sobrenome;
     }
@@ -17,13 +18,16 @@ public class Autor implements Comparable<Autor> {
 
     @Override
     public String toString() {
-        return nome + " " + sobrenome;
+        return String.format("%s %s", nome, sobrenome);
     }
 
     @Override
     public int compareTo(Autor outro) {
-        int nomeComp = this.nome.compareTo(outro.nome);
-        return (nomeComp != 0) ? nomeComp : this.sobrenome.compareTo(outro.sobrenome);
+        int compararNome = this.nome.compareTo(outro.nome);
+        if (compararNome != 0) {
+            return compararNome;
+        }
+        return this.sobrenome.compareTo(outro.sobrenome);
     }
 
     @Override
@@ -31,12 +35,7 @@ public class Autor implements Comparable<Autor> {
         if (this == obj) return true;
         if (!(obj instanceof Autor)) return false;
         Autor outro = (Autor) obj;
-        return nome.equals(outro.nome) && sobrenome.equals(outro.sobrenome);
-    }
+        return this.nome.equals(outro.nome) && this.sobrenome.equals(outro.sobrenome);
+    }    
 
-    @Override
-    public int hashCode() {
-        return nome.hashCode() + sobrenome.hashCode();
-    }
 }
-

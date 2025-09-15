@@ -33,4 +33,5 @@ public class Produto {
     public String toString() {
         return String.format("%s %f %f %d %s",nome,preco, peso, quantidadeEmEstoque, tipo);
     }
+
 }

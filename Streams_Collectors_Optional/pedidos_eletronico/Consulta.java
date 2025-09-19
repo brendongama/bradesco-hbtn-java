@@ -2,6 +2,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import Streams_Collectors_Optional.livros.CategoriaProduto;
+import Streams_Collectors_Optional.livros.Pedido;
+
 public class Consulta {
 
 	public static List<Produto> obterLivrosDoPedido(Pedido pedido) {
@@ -22,5 +25,12 @@ public class Consulta {
         return produtos.stream()
                        .filter(p -> p.getPreco() >= precoMinimo)
                        .collect(Collectors.toList());
+    }
+	
+	public static List<Pedido> obterPedidosComEletronicos(List<Pedido> pedidos) {
+        return pedidos.stream()
+                      .filter(p -> p.getProdutos().stream()
+                                    .anyMatch(prod -> prod.getCategoria() == CategoriaProduto.ELETRONICO))
+                      .collect(Collectors.toList());
     }
 }

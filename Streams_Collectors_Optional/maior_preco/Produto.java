@@ -11,7 +11,7 @@ public class Produto {
 	@Override
 	public String toString() {
 		NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-	    return String.format("[%d] %s %s %s", codigo, nome, categoria, formatoMoeda.format(preco));
+	    return String.format("[%d] %s %s R$ %.2f", codigo, nome, categoria, preco);
 	}
 
 	public Produto(int codigo, String nome, CategoriaProduto categoria, double preco) {

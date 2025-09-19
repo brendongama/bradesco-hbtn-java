@@ -2,9 +2,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import Streams_Collectors_Optional.livros.CategoriaProduto;
-import Streams_Collectors_Optional.livros.Produto;
-
 public class Consulta {
 
 	public static List<Produto> obterLivrosDoPedido(Pedido pedido) {

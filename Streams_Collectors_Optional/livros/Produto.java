@@ -1,4 +1,5 @@
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 public class Produto {
@@ -10,8 +11,11 @@ public class Produto {
 	
 	@Override
 	public String toString() {
-		NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-	    return String.format("[%d] %s %s %s", codigo, nome, categoria, formatoMoeda.format(preco));
+		DecimalFormatSymbols symbols = new DecimalFormatSymbols(new Locale("pt", "BR"));
+	    symbols.setDecimalSeparator(',');
+	    symbols.setGroupingSeparator('\0');
+	    DecimalFormat formato = new DecimalFormat("0.00", symbols);
+	    return String.format("[%d] %s %s R$ %s", codigo, nome, categoria, formato.format(preco));
 	}
 
 	public Produto(int codigo, String nome, CategoriaProduto categoria, double preco) {

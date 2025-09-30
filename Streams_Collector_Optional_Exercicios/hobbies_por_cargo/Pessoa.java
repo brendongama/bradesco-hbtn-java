@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Pessoa implements Comparable<Pessoa> {
 
 	private int codigo;
@@ -7,10 +9,14 @@ public class Pessoa implements Comparable<Pessoa> {
 	private double salario;
 	private List<String> hobbies;
 
-	public Pessoa(String nome, Integer idade, String cargo, Double salario, List<String> hobbies) {
+	
+
+	public Pessoa(int codigo, String nome, String cargo, int idade, double salario, List<String> hobbies) {
+		super();
+		this.codigo = codigo;
 		this.nome = nome;
-		this.idade = idade;
 		this.cargo = cargo;
+		this.idade = idade;
 		this.salario = salario;
 		this.hobbies = hobbies;
 	}

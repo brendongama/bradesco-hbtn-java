@@ -1,5 +1,3 @@
-package threads.um;
-
 public class Consumidor extends Thread {
     private Buffer buffer;
 

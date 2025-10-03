@@ -1,5 +1,3 @@
-package threads.um;
-
 public class Buffer {
     private int item = -1; // -1 indica que o buffer está vazio
 

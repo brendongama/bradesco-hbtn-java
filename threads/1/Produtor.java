@@ -1,5 +1,3 @@
-package threads.um;
-
 public class Produtor extends Thread {
     private Buffer buffer;
 
